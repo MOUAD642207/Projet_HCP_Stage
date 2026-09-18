@@ -1779,18 +1779,6 @@
                     window.location.hash = "";
                 });
                 route();
-
-                function tickClock() {
-                    const d = new Date();
-                    document.getElementById("clock").textContent = d.toLocaleTimeString(
-                        "fr-FR", {
-                            hour: "2-digit",
-                            minute: "2-digit"
-                        },
-                    );
-                }
-                tickClock();
-                setInterval(tickClock, 30000);
             })();
         </script>
     </section>
@@ -3884,6 +3872,30 @@
                         </div>
                     </div>
                 </div>
+                <!-- ==================== SECTION ACTUALITÉS SCRAPÉES ==================== -->
+                <section id="actualites" class="my-5">
+                    <h2 class="text-center mb-4" style="color: #0d5c3b">
+                        <i class="bi bi-rss me-2"></i>Dernières actualités économiques
+                    </h2>
+                    <p class="text-center text-muted mb-4">
+                        Mise à jour automatique depuis Hespress, Médias24 et Le360
+                    </p>
+
+                    <div class="d-flex flex-wrap justify-content-between align-items-center mb-3 gap-2">
+                        <div class="nav nav-pills gap-2">
+                            <button class="nav-link active" data-cat="all">Tout</button>
+
+                        </div>
+                        <div class="d-flex align-items-center gap-3">
+                            <span id="actuLastUpdate" class="text-muted small"></span>
+                            <button class="btn btn-refresh" id="refreshBtn">
+                <i class="bi bi-arrow-clockwise me-1"></i> Rafraîchir
+            </button>
+                        </div>
+                    </div>
+
+                    <div id="actuContainer"></div>
+                </section>
             </section>
 
 
@@ -4774,6 +4786,8 @@
                                     container.innerHTML = renderError( "Impossible de charger les actualités. Vérifiez que le serveur est démarré sur " + API_BASE + ".", ); const retryBtn = document.getElementById("actuRetryBtn"); if (retryBtn) { retryBtn.addEventListener("click",
                                     function () { loadActualites(false); }); } } finally { setRefreshLoading(false); } } tabs.forEach((tab) => { tab.addEventListener("click", function () { tabs.forEach((t) => t.classList.remove("active")); this.classList.add("active");
                                     updateDisplay(this.dataset.cat); }); }); if (refreshBtn) { refreshBtn.addEventListener("click", function () { loadActualites(true); }); } loadActualites(false); })();
+
+                                    </script>
 
 </body>
 
