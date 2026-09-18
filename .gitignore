@@ -1,4 +1,7 @@
 # Python
+# Données personnelles (NE PAS PUBLIER)
+FOLDER1/subscribers.json
+.env
 __pycache__/
 *.py[cod]
 *.so
