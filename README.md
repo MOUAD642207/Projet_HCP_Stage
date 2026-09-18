@@ -18,7 +18,7 @@ Plateforme web de présentation des **opportunités d'investissement au Maroc** 
 ## 🗂️ Structure du projet
 
 ```text
-MOUAD_BOURASS_PROJET_1/
+Projet_HCP_Stage/
 ├── site-web/                  # Front-end (HTML, CSS, JS, Bootstrap 5)
 │   ├── index.html             # Page principale (carte, projets, secteurs, actualités…)
 │   ├── newsletter.html        # Page d'inscription à la newsletter
@@ -61,7 +61,7 @@ MOUAD_BOURASS_PROJET_1/
 git clone https://github.com/MOUAD642207/Projet_HCP_Stage.git
 
 
-cd MOUAD_BOURASS_PROJET_1
+cd Projet_HCP_Stage
 ```
 
 ### 2. (Optionnel) Créer un environnement virtuel
@@ -75,7 +75,7 @@ venv\Scripts\activate         # Windows
 ### 3. Installer les dépendances
 
 ```bash
-pip install fastapi uvicorn "pydantic[email]" feedparser requests streamlit pandas numpy plotly
+pip install fastapi uvicorn  feedparser requests streamlit pandas numpy plotly
 ```
 
 ---
